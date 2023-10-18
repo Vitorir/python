@@ -101,3 +101,4 @@ else:
 
 print(f"Nome: {nome}")
 print(f"Valor a ser pago: R$ {valor:.2f}")
+
