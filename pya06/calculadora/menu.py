@@ -1,2 +1,2 @@
-from calculadora.calc import calculadora
+from calculadora import calculadora
 calculadora()

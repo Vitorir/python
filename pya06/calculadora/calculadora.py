@@ -1,5 +1,4 @@
 from operacoes.operadores import soma, subtrair, multiplicar, dividir
-from operacoes.funcoes_numericas import raiz_quadrada, potencia, fatorial
 def menu():
     while True:
         n1 = float(input("Digite um numero: "))
