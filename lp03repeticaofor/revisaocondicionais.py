@@ -1,14 +1,14 @@
 # 1 Faça um programa que leia 3 números e imprima o maior deles.
-# n1 = float(input("Digite um numero: "))
-# n2 = float(input("Digite um numero: "))
-# n3 = float(input("Digite um numero: "))
+n1 = float(input("Digite um numero: "))
+n2 = float(input("Digite um numero: "))
+n3 = float(input("Digite um numero: "))
 
-# if n1 > n2 and n1 > n3:
-#     print ("O maior número é ", n1)
-# elif n2 > n1 and n2 > n3:
-#     print("O maior numero é ", n2)
-# else:
-#     print(n3)
+if n1 > n2 and n1 > n3:
+    print ("O maior número é ", n1)
+elif n2 > n1 and n2 > n3:
+    print("O maior numero é ", n2)
+else:
+    print(n3)
 
 '''
 2 - Em um campeonato nacional de arco-e-flecha, tem-se equipes de três jogadores para cada estado. Sabendo-se que os arqueiros de uma equipe não obtiveram o mesmo número de pontos, criar um programa que informe se uma equipe foi classificada, de acordo com a seguinte especificação: 
@@ -16,79 +16,79 @@
       • Mostrar esses valores em ordem decrescente; 
       • Se a soma dos pontos for maior do que 100, imprimir a        média aritmética entre eles, caso contrário, imprimir a mensagem "Equipe desclassificada".
 # '''
-# j1 = int(input("Digite pontos: "))
-# j2 = int(input("Digite pontos: "))
-# j3 = int(input("Digite pontos: "))
+j1 = int(input("Digite pontos: "))
+j2 = int(input("Digite pontos: "))
+j3 = int(input("Digite pontos: "))
 
-# maior = j1
-# menor = j1
+maior = j1
+menor = j1
 
-# if j2 > maior:
-#     maior = j2
-# elif j2 < menor:
-#     menor = j2
+if j2 > maior:
+    maior = j2
+elif j2 < menor:
+    menor = j2
     
-# if j3 > maior:
-#     maior = j3
-# elif j3 < menor:
-#     menor = j3
+if j3 > maior:
+    maior = j3
+elif j3 < menor:
+    menor = j3
 
-# soma = j1 + j2 + j3
-# medio = soma - (maior + menor) # o resto que sobrar tirando maior e menor
+soma = j1 + j2 + j3
+medio = soma - (maior + menor) # o resto que sobrar tirando maior e menor
 
-# print("O valor em ordem decrescente é:", maior, medio, menor)
-# if soma > 100:
-#     media = soma / 3
-#     print(media)
-# else: 
-#     print("Equipe desqualificada")
+print("O valor em ordem decrescente é:", maior, medio, menor)
+if soma > 100:
+    media = soma / 3
+    print(media)
+else: 
+    print("Equipe desqualificada")
 
-# '''
-# 2 - segunda solução
-# '''
-# ponto1 = int(input("Digite os pontos do jogador 1: "))
-# ponto2 = int(input("Digite os pontos do jogador 2: "))
-# ponto3 = int(input("Digite os pontos do jogador 3: "))
+'''
+2 - segunda solução
+'''
+ponto1 = int(input("Digite os pontos do jogador 1: "))
+ponto2 = int(input("Digite os pontos do jogador 2: "))
+ponto3 = int(input("Digite os pontos do jogador 3: "))
 
 # # Ordenação dos números em ordem decrescente com estruturas condicionais
-# if ponto1 >= ponto2 and ponto1 >= ponto3:
-#     maior = ponto1
-#     if ponto2 >= ponto3:
-#         medio = ponto2
-#         menor = ponto3
-#     else:
-#         medio = ponto3
-#         menor = ponto2
-# elif ponto2 >= ponto1 and ponto2 >= ponto3:
-#     maior = ponto2
-#     if ponto1 >= ponto3:
-#         medio = ponto1
-#         menor = ponto3
-#     else:
-#         medio = ponto3
-#         menor = ponto1
-# else:
-#     maior = ponto3
-#     if ponto1 >= ponto2:
-#         medio = ponto1
-#         menor = ponto2
-#     else:
-#         medio = ponto2
-#         menor = ponto1
+if ponto1 >= ponto2 and ponto1 >= ponto3:
+    maior = ponto1
+    if ponto2 >= ponto3:
+        medio = ponto2
+        menor = ponto3
+    else:
+        medio = ponto3
+        menor = ponto2
+elif ponto2 >= ponto1 and ponto2 >= ponto3:
+    maior = ponto2
+    if ponto1 >= ponto3:
+        medio = ponto1
+        menor = ponto3
+    else:
+        medio = ponto3
+        menor = ponto1
+else:
+    maior = ponto3
+    if ponto1 >= ponto2:
+        medio = ponto1
+        menor = ponto2
+    else:
+        medio = ponto2
+        menor = ponto1
 
-# # Imprime os pontos em ordem decrescente
-# print("Pontos em ordem decrescente:", maior, medio, menor)
+# Imprime os pontos em ordem decrescente
+print("Pontos em ordem decrescente:", maior, medio, menor)
 
 
 '''
 slide 4 - 01. Faça um programa que imprima na tela apenas os números ímpares entre 1 e 50. 
 '''
 
-# count = 1
-# while count <= 50:
-#     if count % 2 != 0:
-#         print(count)
-#     count += 1
+count = 1
+while count <= 50:
+    if count % 2 != 0:
+        print(count)
+    count += 1
 
 '''
 02. Faça um programa que leia um nome de usuário e a sua senha e não aceite a senha igual ao nome do usuário, mostrando uma mensagem de erro e voltando a pedir as informações.
@@ -124,6 +124,23 @@ Criar um programa que imprima:
 
 Obs.: Considere aprovado com nota >= 7.0
 '''
+qtd_aprovados = 0
+soma = 0
+count = 1
+while count <= 3:
+    nota = float(input("Digite a nota: "))
+    if nota >= 7:
+        qtd_aprovados += 1
+    soma += nota
+    count += 1
+
+media = soma / 3
+percentual_reprovados = ((3 - qtd_aprovados) / 3) * 100
+print(qtd_aprovados, media, percentual_reprovados)
+
+
+
+
 
 # Solicita ao usuário o número de alunos na turma
 numero_alunos = int(input("Digite o número de alunos na turma: "))
@@ -164,6 +181,7 @@ print(f"Percentual de reprovados: {percentual_reprovados:.2f}%")
 3-Outros 
 • Qual o seu salário? 
 '''
+
 
 # Inicializa as variáveis para contagem e cálculos
 fortaleza_torcedores = 0
@@ -208,3 +226,12 @@ if fortaleza_contagem > 0:
     print(f"Número de pessoas de Fortaleza, torcedores do Ceará: {fortaleza_ceara}")
 else:
     print("Nenhum torcedor do Fortaleza participou da pesquisa.")
+
+
+
+# slide 09 - 01. Faça um programa em Python que leia um valor inteiro e mostre a tabuada de 1 a 10 do valor lido.
+count = 1
+num = int(input("Digite um numero: "))
+while count <=10:
+    print(f"{num} * {count} = {count * num}")
+    count +=1
