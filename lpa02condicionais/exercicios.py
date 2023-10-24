@@ -1,11 +1,25 @@
 '''
-Faça um Programa que peça as 4 notas bimestrais, mostre a média e a situação final do aluno.
+1 - Faça um Programa que peça as 4 notas bimestrais, mostre a média e a situação final do aluno.
 Observação: para ser 
 considerado aprovado a média deverá ser maior ou igual a 7.
 '''
+soma = 0
+for i in range(4):
+    nota = float(input("Digite a nota: "))
+    soma += nota
+
+media = soma / 4
+if media == 10:
+    print("Aprovado com distinção!")
+elif media >= 7 and media < 10:
+    print("Aprovado!")
+elif media >= 5 and media < 7:
+    print("Recuperacao")
+else:
+    print("Reprovado")
 
 '''
-Programa para adição de dois valores inteiros e exibição do resultado com ajustes baseados em sua magnitude:
+3 - Programa para adição de dois valores inteiros e exibição do resultado com ajustes baseados em sua magnitude:
 '''
 valor1 = int(input("Digite o primeiro valor inteiro: "))
 valor2 = int(input("Digite o segundo valor inteiro: "))
@@ -21,8 +35,7 @@ else:
 
 
 ''''
-Programa para verificar se um número é múltiplo de 3 ou não:
-
+4 - Programa para verificar se um número é múltiplo de 3 ou não:
 '''
 numero = int(input("Digite um número: "))
 
@@ -71,9 +84,29 @@ print(sindicato)
 salario_liquido = valor_total - ir - inss - sindicato
 print(salario_liquido)
 
+
+# 07
+nome = input("Digite seu nome completo: ")
+idade = int("Digite idade: ")
+
+if idade <= 10:
+    valor = 30
+elif idade > 10 and idade <= 29:
+    valor = 60
+elif idade > 29 and idade <= 45:
+    valor = 120
+elif idade > 45 and idade <= 59:
+    valor = 150
+elif idade > 59 and idade < 65:
+    valor = 250
+else:
+    valor = 400
+
+print(f"A pessoa {nome} vai pagar o valor de {valor:.2f}")
+
+
 # lp 07
 '''
-
 7. Depois da liberação do governo para as mensalidades dos planos de saúde, as pessoas começaram a fazer pesquisas para descobrir um bom plano, não muito caro. Um vendedor de um plano de saúde apresentou a tabela a seguir. Faça um programa que entre com o nome e a idade de uma pessoa e imprima o nome e o valor que ela deverá pagar.
                Idade                                               Valor 
               Até 10 anos                                     R$30,00 
