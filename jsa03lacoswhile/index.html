@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // Escreva um programa que irá solicitar ao usuário uma
+        // palavra e que imprimirá no console a palavra sem
+        // vogais.
+
+        let palavra = prompt("Digite uma palavra: ")
+        let vogais = 0
+        let consoantes = 0
+        for(letra of palavra) {
+            if (letra == 'a' || 'e' || 'i' || 'o' || 'u') {
+                vogais++
+            } else {
+                consoantes++
+            }
+        }
+
+        console.log(vogais);
+        console.log(consoantes);
+
+    </script>
+</body>
+
+</html>
