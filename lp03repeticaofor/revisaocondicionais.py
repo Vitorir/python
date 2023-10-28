@@ -76,13 +76,60 @@ else:
         medio = ponto2
         menor = ponto1
 
-# Imprime os pontos em ordem decrescente
 print("Pontos em ordem decrescente:", maior, medio, menor)
+
+
+# Resolução 3
+pontos_jogador1 = int(input("Digite os pontos do jogador 1: "))
+pontos_jogador2 = int(input("Digite os pontos do jogador 2: "))
+pontos_jogador3 = int(input("Digite os pontos do jogador 3: "))
+
+if pontos_jogador1 >= pontos_jogador2 and pontos_jogador1 >= pontos_jogador3:
+    print(pontos_jogador1)
+    if pontos_jogador2 >= pontos_jogador3:
+        print(pontos_jogador2)
+        print(pontos_jogador3)
+    else:
+        print(pontos_jogador3)
+        print(pontos_jogador2)
+elif pontos_jogador2 >= pontos_jogador1 and pontos_jogador2 >= pontos_jogador3:
+    print(pontos_jogador2)
+    if pontos_jogador1 >= pontos_jogador3:
+        print(pontos_jogador1)
+        print(pontos_jogador3)
+    else:
+        print(pontos_jogador3)
+        print(pontos_jogador1)
+else:
+    print(pontos_jogador3)
+    if pontos_jogador1 >= pontos_jogador2:
+        print(pontos_jogador1)
+        print(pontos_jogador2)
+    else:
+        print(pontos_jogador2)
+        print(pontos_jogador1)
+
+soma_pontos = pontos_jogador1 + pontos_jogador2 + pontos_jogador3
+
+if soma_pontos > 100:
+    # Calcular a média aritmética dos pontos
+    media_pontos = soma_pontos / 3
+    print("Média dos pontos:", media_pontos)
+else:
+    print("Equipe desclassificada")
 
 
 '''
 slide 4 - 01. Faça um programa que imprima na tela apenas os números ímpares entre 1 e 50. 
 '''
+count = 1
+while count < 50:
+    if count % 2 != 0:
+        print(count)
+
+    count+=1
+
+
 
 count = 1
 while count <= 50:
@@ -182,8 +229,6 @@ print(f"Percentual de reprovados: {percentual_reprovados:.2f}%")
 • Qual o seu salário? 
 '''
 
-
-# Inicializa as variáveis para contagem e cálculos
 fortaleza_torcedores = 0
 ceara_torcedores = 0
 ferroviario_torcedores = 0
@@ -194,8 +239,7 @@ fortaleza_contagem = 0
 caucaia_ferroviario = 0
 fortaleza_ceara = 0
 
-# Loop para realizar a pesquisa com 50 pessoas
-for _ in range(50):
+for i in range(50):
     time = int(input("Qual o seu time de coração? (Digite o número correspondente) "))
     moradia = int(input("Onde você mora? (Digite o número correspondente) "))
     salario = float(input("Qual o seu salário? "))
@@ -217,7 +261,6 @@ for _ in range(50):
     elif time == 5:
         outros_torcedores += 1
 
-# Calcula as médias e imprime as estatísticas
 if fortaleza_contagem > 0:
     media_salario_fortaleza = fortaleza_salario_total / fortaleza_contagem
     print(f"Número de torcedores do Fortaleza: {fortaleza_torcedores}")
