@@ -10,7 +10,7 @@ fortaleza_ceara = 0
 
 while count <= 3:
     clube = input("""Digite seu time: 
-                  1-Fortaleza; 
+1-Fortaleza; 
 2-Ceará; 
 3-Ferroviário; 
 4-Icasa; 
@@ -19,9 +19,9 @@ while count <= 3:
     
     moradia = input("""Digite bairro: 
                    
-                    1-Fortaleza; 
-                    2-Caucaia; 
-                    3-Outros
+1-Fortaleza; 
+2-Caucaia; 
+3-Outros
 """)
 
     salario = float(input("Digite seu salario: "))
