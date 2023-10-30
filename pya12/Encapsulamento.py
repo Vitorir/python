@@ -33,5 +33,9 @@ class Funcionario:
 f1 = Funcionario('Fulano', 'programador', 50)
 print(f1.salario) # 0
 f1.horas_trabalhadas = 40
+
 f1.calcula_salario()
 print(f1.salario) 
+
+f1.salario = 1020
+print(f1.salario)

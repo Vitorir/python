@@ -4,7 +4,6 @@ class Ingresso:
         self._preco = preco
         self._titulo = titulo
 
-
     @property
     def preco(self):
         return self._preco
