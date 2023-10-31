@@ -8,6 +8,7 @@ def inverte_texto(string:str):
     invertida = ""
     for i in string:
         invertida = i + invertida
+
     return invertida
 
 def invert_text(string):
