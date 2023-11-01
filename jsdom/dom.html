@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #retangulo {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="retangulo"></div>
+    <button onclick="mudarCor('red')">Vermelho</button>
+    <button onclick="mudarCor('blue')">Azul</button>
+    <button onclick="mudarCor('green')">Verde</button>
+
+    <script>
+        function mudarCor(cor) {
+            var retangulo = document.getElementById('retangulo');
+            retangulo.style.backgroundColor = cor;
+        }
+
+        var retangulo = document.getElementById('retangulo');
+        retangulo.addEventListener('mouseover', function () {
+            retangulo.style.backgroundColor = 'white';
+        });
+    </script>
+</body>
+
+</html>
