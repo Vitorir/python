@@ -16,42 +16,72 @@ Refaça o programa anterior e imprima a lista dos alunos aprovados em
 ordem decrescente da maior média para a menor
 '''
 
-nome = input("nome: ")
-sobrenome = input("sobrenome: ")
+nome = input("Nome: ")
+sobrenome = input("Sobrenome: ")
 idade = int(input("Idade: "))
 email = input("Email: ")
 
 notas = []
-soma = 0
-maior = 0
-menor = 0
+
 for i in range(4):
-    nota = float(input("Digite nota: "))
-    if maior < nota:
-        maior = nota
-    elif menor < nota:
-        menor < nota
-    soma += nota
+    nota = float(input("Nota: "))
     notas.append(nota)
 
-media = soma / 4
-situacao = ''
-if media >= 7:
+media = sum(notas)/len(notas)
+
+if media >= 7 and media < 10:
     situacao = 'Aprovado'
 else:
     situacao = 'Reprovado'
 
-
-
 aluno = {
     'nome': nome,
-    'sobrenome': sobrenome,
-    'maior-nota': maior,
-    'menor-nota': menor,
+    'notas': notas,
+    'maior nota': max(notas),
+    'menor nota': min(notas),
     'media': media,
+    'situacao': situacao
 }
 
-aluno['situacao'] = situacao
 
-for chave, valor in aluno.items():
-    print(f"{chave}: {valor}")
+
+'''
+Refaça o programa anterior e imprima a lista dos alunos aprovados em
+ordem decrescente da maior média para a menor
+'''
+# Lista para armazenar os dados de todos os alunos
+alunos = []
+
+# Loop para ler os dados e calcular as médias dos alunos
+while True:
+    # Ler os dados do aluno
+    nome = input("Digite o nome do aluno (ou 'sair' para encerrar): ")
+    if nome == 'sair':
+        break
+    
+    notas = []
+    for i in range(4):
+        nota = float(input("Digite a nota {}: ".format(i+1)))
+        notas.append(nota)
+    
+    media = sum(notas) / len(notas)
+    
+    # Criar o dicionário com as informações do aluno
+    aluno = {
+        "Nome": nome,
+        "Notas": notas,
+        "Média": media
+    }
+    
+    # Adicionar o dicionário à lista de alunos
+    alunos.append(aluno)
+
+# Ordenar a lista de alunos em ordem decrescente da maior média para a menor
+alunos_aprovados = sorted(alunos, key=lambda x: x["Média"], reverse=True)
+
+# Imprimir a lista dos alunos aprovados
+print("\nLista de alunos aprovados (em ordem decrescente da maior média para a menor):")
+for aluno in alunos_aprovados:
+    print("Nome:", aluno["Nome"])
+    print("Média:", aluno["Média"])
+    print()
