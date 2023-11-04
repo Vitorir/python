@@ -149,4 +149,3 @@ Estado Civil: 's', 'c', 'v', 'd';
 sexo = input("Sexo :")
 while sexo != 'f' and sexo != 'm':
     sexo = input("Digite novamente: ")
-
