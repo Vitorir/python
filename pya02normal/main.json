@@ -1,0 +1,15 @@
+{
+    "user": [
+        {
+            "id": 1,
+            "username": "fulano123",
+            "password": "senha123"
+        }
+    ],
+    "pagamentos": [
+        {
+            "descricao": "Compra do livro tal dia tal",
+            "valor": 59.90
+        }
+    ]
+}

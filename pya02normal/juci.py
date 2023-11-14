@@ -94,6 +94,13 @@ caso contrário, deve imprimir a mensagem: "Nao encontrado!".
 # if numero not in num_inteiros:
 #     print(f'Nao encontrado!')
 
+lista_inteiros = [21, 13, 22, 44, 12]
+num = int(input("Digite um numero: "))
+if num in lista_inteiros:
+    print(lista_inteiros.index(num))
+else:
+    print("Não encontrado!")
+
 '''
 9. Faça um programa que armazene 8 números em uma lista e imprima 
 todos os números. Ao final, imprima o total de números múltiplos de seis. 
@@ -114,28 +121,28 @@ listagem contendo as notas, a média e a situação de cada aluno.
 Utilize quantas listas forem necessárias para armazenar os dados.
 '''
 
-# alunos = []
-# for i in range(1, 3):
-#     nome = input("Nome: ")
-#     n1 = float(input("Nota 1: "))
-#     n2 = float(input("Nota 2: "))
+alunos = []
+for i in range(1, 3):
+    nome = input("Nome: ")
+    n1 = float(input("Nota 1: "))
+    n2 = float(input("Nota 2: "))
 
-#     media = (n1 + n2) / 2
+    media = (n1 + n2) / 2
 
-#     if media >= 7:
-#         situacao = 'Aprovado'
-#     elif media >= 5 and media < 7:
-#         situacao = 'Recuperacao'
-#     else:
-#         situacao = 'Reprovado'
+    if media >= 7:
+        situacao = 'Aprovado'
+    elif media >= 5 and media < 7:
+        situacao = 'Recuperacao'
+    else:
+        situacao = 'Reprovado'
     
-#     alunos.append([nome, [n1, n2], media, situacao])
+    alunos.append([nome, [n1, n2], media, situacao])
 
-# for aluno in alunos:
-#     print("Nome: ", aluno[0])
-#     print("Notas: ", aluno[1])
-#     print("Media: ", aluno[2])
-#     print("Situacao: ", aluno[3])
+for aluno in alunos:
+    print("Nome: ", aluno[0])
+    print("Notas: ", aluno[1])
+    print("Media: ", aluno[2])
+    print("Situacao: ", aluno[3])
 
 
 '''
@@ -184,10 +191,12 @@ print(lista_inteiros)
 Dada uma tupla T de n valores inteiros, escreva um programa 
 que remova todos os números pares da tupla.
 '''
-T = (1, 2, 3, 4, 5, 6, 7)
-lista = list(T)
-lista_pares = list(filter(lambda x: x % 2 == 0, lista))
-print(lista_pares)
+tupla = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+tupla_sem_pares = tuple(x for x in tupla if x % 2 != 0)
+
+print("Tupla original:", tupla)
+print("Tupla sem números pares:", tupla_sem_pares)
 
 
 '''
@@ -195,13 +204,21 @@ Dadas duas tuplas P1 e P2, ambas com n valores reais que representam as notas de
 prova 1 e na prova 2, respectivamente, escreva um programa que calcule a média da turma nas 
 provas 1 e 2, imprimindo em qual das provas a turma obteve a melhor média.
 '''
-P1 = (4, 5.3, 7.1, 8, 10, 9.2)
-P2 = (2.4, 3.2, 1.7, 8.8, 0, 3.2)
-media_p1 = sum(P1)/ len(P1)
-print(media_p1)
-media_p2 = sum(P2)/ len(P2)
-print(media_p2)
+prova1 = (7.5, 8.0, 6.5, 9.0, 7.0)
+prova2 = (8.5, 7.0, 9.0, 6.0, 7.5)
 
+media_prova1 = sum(prova1) / len(prova1)
+media_prova2 = sum(prova2) / len(prova2)
+
+print("Média na prova 1:", media_prova1)
+print("Média na prova 2:", media_prova2)
+
+if media_prova1 > media_prova2:
+    print("A turma obteve a melhor média na prova 1.")
+elif media_prova2 > media_prova1:
+    print("A turma obteve a melhor média na prova 2.")
+else:
+    print("A turma obteve a mesma média nas duas provas.")
 
 '''
 Dadas duas tuplas L1 e L2, com n e m valores inteiros, respectivamente, escreva um 
