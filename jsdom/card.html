@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+
+        #retangulo {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+        }
+
+        .pai {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .botoes {
+            border: 1px solid black;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="pai">
+        <div id="retangulo"></div>
+
+        <div class="botoes">
+            <button onclick="mudar('red')">Vermelho</button>
+            <button onclick="mudar('blue')">Azul</button>
+            <button onclick="mudar('yellow')">Amarelo</button>
+        </div>
+    </div>
+    <script>
+        function mudar(cor) {
+            let retangulo = document.getElementById('retangulo');
+            retangulo.style.backgroundColor = cor
+        }
+
+        let retangulo = document.getElementById('retangulo')
+        retangulo.addEventListener('mouseover', function () {
+            retangulo.style.backgroundColor = 'white'
+        })
+    </script>
+</body>
+
+</html>
