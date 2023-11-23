@@ -1,4 +1,7 @@
 '''
+1 - Escreva um programa que solicite ao usuário um número inteiro positivo
+e realize uma contagem regressiva a partir desse número até zero,
+imprimindo cada número no processo.
 2 - Escreva um programa que solicite ao usuário um número inteiro e
 imprima a tabuada desse número, de 1 a 10.
 3 - Escreva um programa que solicite ao usuário uma frase e conte
@@ -10,6 +13,23 @@ conta quantas vogais existem numa frase, implemente mais uma
 funcionalidade. O programa agora deve imprimir a quantidade de vogais e
 consoantes encontradas.
 '''
+
+# Questão 1
+inteiro = int(input("Digite um numero inteiro: "))
+for i in range(inteiro, -1, -1):
+    print(i)
+
+while inteiro >= 0:
+    print(inteiro)
+    inteiro-= 1
+
+# Questão 3
+frase = input("Digite frase: ")
+conta_vogais = 0
+for i in frase:
+    if i.lower() in 'aeiou':
+        conta_vogais += 1
+
 
 # Questão 2
 numero = int(input("Digite um número inteiro: "))
@@ -74,6 +94,19 @@ usuário que digite uma senha e verificar se ela atende aos critérios
 estabelecidos. Os critérios são os seguintes:
 •A senha deve ter no mínimo 8 caracteres e no máximo 12 caracteres.
 '''
+
+# Questao 1
+total = 0
+while True:
+    nome = input("Nome: ")
+    if nome == '-1':
+        break
+
+    preco = float(input("Preco: "))
+    total += preco
+
+print(f'Total da compra {total}')
+
 
 
 # Questão 1
